@@ -1,1 +1,299 @@
-# meu-portfolio
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional | William da Conceição Araújo</title>
+    
+    <style>
+        /* ==========================================================================
+           Configurações Globais e Resets
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0056b3;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #003d80;
+        }
+
+        /* ==========================================================================
+           Cabeçalho e Menu de Navegação
+           ========================================================================== */
+        header {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+        }
+
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid #38bdf8;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.05);
+            display: inline-block;
+            border-radius: 30px;
+            padding: 5px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #cbd5e1;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* ==========================================================================
+           Layout Principal (Main Container)
+           ========================================================================== */
+        .main-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 25px;
+        }
+
+        .conteudo-esquerdo {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1e293b;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Habilidades */
+        .skills-list {
+            list-style-position: inside;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Grid de Projetos */
+        .projects-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .projeto-item {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-left: 4px solid #38bdf8;
+            border-radius: 4px;
+        }
+
+        .projeto-item h3 {
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        /* Barra Lateral (Aside) */
+        .sidebar {
+            flex: 1;
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #1e293b;
+        }
+
+        .links-sociais {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .links-sociais li {
+            margin-bottom: 10px;
+        }
+
+        .links-sociais li a {
+            display: block;
+            background-color: #f1f5f9;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .links-sociais li a:hover {
+            background-color: #e2e8f0;
+        }
+
+        /* ==========================================================================
+           Rodapé (Footer)
+           ========================================================================== */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #38bdf8;
+        }
+
+        /* ==========================================================================
+           Responsividade (Media Query para Celulares/Tablets)
+           ========================================================================== */
+        @media screen and (max-width: 850px) {
+            .main-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 0;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="inicio">
+        <div class="header-container">
+            <img src="https://via.placeholder.com/150" alt="Foto de William da Conceição Araújo" class="avatar">
+            <h1>William da Conceição Araújo</h1>
+            <p class="tagline">"Construindo soluções com lógica, criatividade e tecnologia."</p>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        
+        <div class="conteudo-esquerdo">
+            <section id="sobre" class="card">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Sou estudante de Tecnologia da Informação e apaixonado por desenvolvimento de software e infraestrutura de redes. Atualmente, busco aprimorar minhas habilidades em lógica de programação e tecnologias Web (HTML, CSS e JavaScript), unindo o rigor técnico à criatividade para resolver problemas reais e desenvolver interfaces funcionais.</p>
+            </section>
+
+            <section id="habilidades" class="card">
+                <h2>Habilidades Técnico-Profissionais</h2>
+                <ul class="skills-list">
+                    <li><strong>Linguagens:</strong> HTML5, CSS3, Python, C</li>
+                    <li><strong>Redes de Computadores:</strong> Modelos OSI e TCP/IP, Roteamento e Cabeamento</li>
+                    <li><strong>Gestão & Negócios:</strong> Modelagem de Negócios, Análise SWOT e Logística</li>
+                 </ul>
+            </section>
+
+            <section id="projetos" class="card">
+                <h2>Projetos em Destaque</h2>
+                <div class="projects-grid">
+                    
+                    <article class="projeto-item">
+                        <h3>01. Jogo da Forca em C / Python</h3>
+                        <p>Desenvolvimento de um jogo de terminal interativo para fixação de estruturas de dados, manipulação de strings e controle de fluxo. O projeto foi inicialmente modelado em C e posteriormente migrado para Python para otimização do código.</p>
+                    </article>
+
+                    <article class="projeto-item">
+                        <h3>02. Modelagem de Sistema de Vendas E-commerce</h3>
+                        <p>Atividade acadêmica focada na análise de domínio de uma empresa de varejo, mapeando os requisitos de software e identificando os atributos e métodos das classes principais para o sistema de vendas online.</p>
+                    </article>
+
+                </div>
+            </section> </div>
+
+        <aside class="sidebar card">
+            <h2>Interesses & Hobbies</h2>
+            <p>Além da tecnologia, gosto de me dedicar a projetos de manutenção prática, culinária e acompanhar futebol nos momentos de lazer.</p>
+            
+            <h3>Links Úteis</h3>
+            <ul class="links-sociais">
+                <li><a href="https://github.com" target="_blank">🔗 GitHub</a></li>
+                <li><a href="https://linkedin.com" target="_blank">🔗 LinkedIn</a></li>
+                <li><a href="https://instagram.com" target="_blank">📸 Instagram</a></li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <footer id="contato">
+        <p>Contato: <a href="mailto:william.araujo@email.com">william.araujo@email.com</a></p>
+        <p>&copy; 2026 William da Conceição Araújo. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
